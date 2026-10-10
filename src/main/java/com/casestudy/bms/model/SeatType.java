@@ -1,5 +1,6 @@
 package com.casestudy.bms.model;
 
+import jakarta.persistence.Entity;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -8,6 +9,7 @@ import lombok.Setter;
  */
 @Getter 
 @Setter 
-public class SeatType {
+@Entity 
+public class SeatType extends BaseModel{
     private String seatType;
 }
