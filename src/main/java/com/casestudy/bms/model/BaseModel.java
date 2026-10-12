@@ -18,7 +18,7 @@ import lombok.Setter;
 public class BaseModel {
     @Id 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     @CreationTimestamp 
     private Date createdAt;
     @UpdateTimestamp 
