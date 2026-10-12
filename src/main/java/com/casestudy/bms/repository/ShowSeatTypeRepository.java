@@ -1,12 +1,6 @@
 package com.casestudy.bms.repository;
 
-import javax.swing.Spring;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.support.SimpleJpaRepository;
 
 import com.casestudy.bms.model.ShowSeatType;
 
