@@ -5,7 +5,6 @@ import java.time.ZoneId;
 import java.util.Date;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -33,38 +32,31 @@ import com.casestudy.bms.repository.ShowSeatTypeRepository;
 import com.casestudy.bms.repository.TheaterRepository;
 import com.casestudy.bms.repository.UserRepository;
 
+import lombok.RequiredArgsConstructor;
+
 @SpringBootApplication
+@RequiredArgsConstructor
 public class BookmyshowSqlApplication implements CommandLineRunner{
 
-	@Autowired
-	private RegionRepository regionRepository;
+	private final RegionRepository regionRepository;
 
-	@Autowired
-	private TheaterRepository theaterRepository;
+	private final TheaterRepository theaterRepository;
 
-	@Autowired
-	private ScreenRepository screenRepository;
+	private final ScreenRepository screenRepository;
 
-	@Autowired
-	private SeatRepository seatRepository;
+	private final SeatRepository seatRepository;
 
-	@Autowired
-	private ShowRepository showRepository;
+	private final ShowRepository showRepository;
 
-	@Autowired
-	private SeatTypeRepository seatTypeRepository;
+	private final SeatTypeRepository seatTypeRepository;
 
-	@Autowired
-	private MovieRepository movieRepository;
+	private final MovieRepository movieRepository;
 
-	@Autowired
-	private ShowSeatRepository showSeatRepository;
+	private final ShowSeatRepository showSeatRepository;
 
-	@Autowired
-	private ShowSeatTypeRepository showSeatTypeRepository;
+	private final ShowSeatTypeRepository showSeatTypeRepository;
 
-	@Autowired
-	private UserRepository userRepository;
+	private final UserRepository userRepository;
 
 	public static void main(String[] args) {
 		SpringApplication.run(BookmyshowSqlApplication.class, args);

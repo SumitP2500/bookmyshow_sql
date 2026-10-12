@@ -1,11 +1,10 @@
 package com.casestudy.bms.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
 import com.casestudy.bms.model.Seat;
 
-@Repository 
+/** No @Repository needed: Spring Data scans interfaces extending JpaRepository and registers a proxy bean for each. */
 public interface SeatRepository extends JpaRepository<Seat, Long>{
         
 }

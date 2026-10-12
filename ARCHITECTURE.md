@@ -61,7 +61,7 @@ See [DATA_MODEL.md](DATA_MODEL.md) for the full relationships.
 
 **Reserved table names.** `Show` is mapped as `bms_show` and `User` as `bms_user`. `Seat.row` and `Seat.column` map to `bms_row` and `bms_column`. These avoid SQL reserved words.
 
-**Dependency injection.** Repositories are injected into the main class with field `@Autowired`. `@Repository` on the interfaces is optional because Spring Data registers them anyway.
+**Dependency injection.** Repositories are injected through the constructor, which Lombok generates with `@RequiredArgsConstructor` from the `final` fields. Spring uses a single constructor automatically, so no `@Autowired` is needed. `@Repository` on the interfaces is optional because Spring Data registers them anyway.
 
 **Time zone.** Show times are built in `Asia/Kolkata` (IST) and stored as `java.util.Date`.
 
