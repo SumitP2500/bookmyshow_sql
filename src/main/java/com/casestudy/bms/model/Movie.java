@@ -2,6 +2,7 @@ package com.casestudy.bms.model;
 
 import java.util.List;
 
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -23,6 +24,7 @@ public class Movie extends BaseModel{
     @OneToMany (mappedBy = "movie")
     List<Show> shows;
     
+    @ElementCollection
     @Enumerated(EnumType.STRING)
     private List<Feature> features;
 }

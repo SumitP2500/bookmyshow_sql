@@ -2,6 +2,7 @@ package com.casestudy.bms.model;
 
 import java.util.List;
 
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -24,6 +25,7 @@ public class Screen extends BaseModel {
     private List<Show> shows;
     @ManyToOne
     private Theater theater;
-    @Enumerated (EnumType.STRING)
+    @ElementCollection
+    @Enumerated(EnumType.STRING)
     private List<Feature> features;
 }

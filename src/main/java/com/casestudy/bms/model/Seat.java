@@ -3,7 +3,6 @@ package com.casestudy.bms.model;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToOne;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -25,7 +24,7 @@ public class Seat extends BaseModel {
     @ManyToOne 
     private Screen screen;
     
-    @OneToOne
+    @ManyToOne 
     private SeatType seatType;
 
 }
