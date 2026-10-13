@@ -24,7 +24,7 @@ public class Movie extends BaseModel{
     @OneToMany (mappedBy = "movie")
     List<Show> shows;
     
-    @ElementCollection
     @Enumerated(EnumType.STRING)
+    @ElementCollection
     private List<Feature> features;
 }

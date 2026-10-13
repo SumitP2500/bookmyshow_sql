@@ -29,8 +29,8 @@ public class Show extends BaseModel{
     private Date startTime;
     private Date endTime;
 
-    @ElementCollection
     @Enumerated(EnumType.STRING)
+    @ElementCollection
     private List<Feature> features;
 
 }
